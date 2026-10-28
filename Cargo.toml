@@ -1,0 +1,17 @@
+[package]
+name = "salzburg-time"
+version = "0.1.0"
+edition = "2021"
+authors = ["torato"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { version = "0.8" }
+worker-macros = { version = "0.8" }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
