@@ -29,8 +29,10 @@ label,.label{font-size:13px;color:var(--mut);letter-spacing:.04em}
 .badge{display:inline-block;background:var(--gold);color:#21242c;border-radius:999px;padding:1px 10px;font-size:12px;font-weight:700;margin-left:6px}
 .badge.blue{background:#7fb4ff}
 .mono{font-variant-numeric:tabular-nums;letter-spacing:.03em}
-.big{font:800 clamp(46px,10vw,72px)/1.15 ui-monospace,SFMono-Regular,Menlo,Consolas,"JetBrains Mono",monospace;color:var(--gold);text-shadow:0 0 24px rgba(255,209,102,.25)}
-.big2{font:700 clamp(30px,6vw,44px)/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.big{font:800 clamp(26px,5.2vw,50px)/1.2 ui-monospace,SFMono-Regular,Menlo,Consolas,"JetBrains Mono",monospace;color:var(--gold);text-shadow:0 0 24px rgba(255,209,102,.25)}
+.big.jp{color:var(--ink);text-shadow:none}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;margin-top:6px}
+.duo>div{min-width:0}
 .small{font-size:13px}.mut{color:var(--mut)}
 .hero{text-align:center;padding:30px 22px}
 .greet{display:flex;gap:12px;align-items:baseline;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
@@ -206,7 +208,7 @@ pub fn page(now_ms: u64, later_hours: Option<i64>) -> String {
     };
 
     let hero = format!(
-        "<div class=\"card hero\"><div class=\"greet\"><span class=\"ga\">{}</span><span class=\"gj\">{}</span></div><div class=\"label\">🇦🇹 ザルツブルク Salzburg<span class=\"badge\">{}</span></div><div class=\"big mono\" id=\"salz\">{}</div><div class=\"small mut\">{}</div></div>\n<div class=\"card\"><div class=\"label\">🇯🇵 日本時間<span class=\"badge blue\">JST (UTC+9)</span></div><div class=\"big2 mono\" id=\"jst\">{}</div><div class=\"small mut\">{}</div></div>\n<p class=\"diff\">🇯🇵 日本はザルツブルクより <b>{}時間</b> 進んでいます。 <span class=\"mut small\">（夏は7時間差、冬は8時間差）</span></p>",
+        "<div class=\"card hero\"><div class=\"greet\"><span class=\"ga\">{}</span><span class=\"gj\">{}</span></div><div class=\"duo\"><div><div class=\"label\">🇦🇹 ザルツブルク Salzburg<span class=\"badge\">{}</span></div><div class=\"big mono\" id=\"salz\">{}</div><div class=\"small mut\">{}</div></div><div><div class=\"label\">🇯🇵 日本時間<span class=\"badge blue\">JST (UTC+9)</span></div><div class=\"big jp mono\" id=\"jst\">{}</div><div class=\"small mut\">{}</div></div></div></div>\n<p class=\"diff\">🇯🇵 日本はザルツブルクより <b>{}時間</b> 進んでいます。 <span class=\"mut small\">（夏は7時間差、冬は8時間差）</span></p>",
         greet_at,
         greet_jp,
         season,
