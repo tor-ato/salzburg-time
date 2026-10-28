@@ -51,7 +51,7 @@ button{background:var(--gold);border:0;border-radius:10px;padding:9px 18px;font-
 .result th{text-align:left;color:var(--mut);font-weight:600;font-size:13px;padding:6px 8px;white-space:nowrap}
 .result td{padding:6px 8px;font-variant-numeric:tabular-nums}
 .result b{color:var(--gold);font-size:1.15em}
-.chips{display:grid;grid-auto-flow:column;grid-template-rows:repeat(13,auto);gap:6px;margin-top:12px}
+.chips{display:grid;grid-auto-flow:column;grid-template-rows:repeat(12,auto);gap:6px;margin-top:12px}
 .chip{background:#0d1729;border:1px solid var(--line);border-radius:10px;padding:5px 10px;font-size:13px;display:flex;justify-content:space-between;font-variant-numeric:tabular-nums;white-space:nowrap}
 .chip.cur{border-color:var(--gold);color:var(--gold)}
 .chip .ar{color:#55648c}
