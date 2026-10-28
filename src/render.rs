@@ -35,6 +35,7 @@ label,.label{font-size:13px;color:var(--mut);letter-spacing:.04em}
 .duo>div{min-width:0}
 .small{font-size:13px}.mut{color:var(--mut)}
 .hero{text-align:center;padding:30px 22px}
+.hero .badge{margin-left:0}
 .greet{display:flex;gap:12px;align-items:baseline;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
 .ga{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff}
 .gj{color:var(--mut);font-size:13px}
@@ -208,7 +209,7 @@ pub fn page(now_ms: u64, later_hours: Option<i64>) -> String {
     };
 
     let hero = format!(
-        "<div class=\"card hero\"><div class=\"greet\"><span class=\"ga\">{}</span><span class=\"gj\">{}</span></div><div class=\"duo\"><div><div class=\"label\">🇦🇹 ザルツブルク Salzburg<span class=\"badge\">{}</span></div><div class=\"big mono\" id=\"salz\">{}</div><div class=\"small mut\">{}</div></div><div><div class=\"label\">🇯🇵 日本時間<span class=\"badge blue\">JST (UTC+9)</span></div><div class=\"big jp mono\" id=\"jst\">{}</div><div class=\"small mut\">{}</div></div></div></div>\n<p class=\"diff\">🇯🇵 日本はザルツブルクより <b>{}時間</b> 進んでいます。 <span class=\"mut small\">（夏は7時間差、冬は8時間差）</span></p>",
+        "<div class=\"card hero\"><div class=\"greet\"><span class=\"ga\">{}</span><span class=\"gj\">{}</span></div><div class=\"duo\"><div><div class=\"label\">🇦🇹 ザルツブルク Salzburg<br><span class=\"badge\">{}</span></div><div class=\"big mono\" id=\"salz\">{}</div><div class=\"small mut\">{}</div></div><div><div class=\"label\">🇯🇵 日本時間<br><span class=\"badge blue\">JST (UTC+9)</span></div><div class=\"big jp mono\" id=\"jst\">{}</div><div class=\"small mut\">{}</div></div></div></div>\n<p class=\"diff\">🇯🇵 日本はザルツブルクより <b>{}時間</b> 進んでいます。 <span class=\"mut small\">（夏は7時間差、冬は8時間差）</span></p>",
         greet_at,
         greet_jp,
         season,
