@@ -38,8 +38,8 @@ label,.label{font-size:13px;color:var(--mut);letter-spacing:.04em}
 .gj{color:var(--mut);font-size:13px}
 .diff{background:rgba(255,255,255,.03);border:1px dashed var(--line);border-radius:12px;padding:10px 16px;font-size:14px}
 .chars b,.diff b{color:var(--gold)}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
-.grid2 .card{margin-bottom:0}
+.stack{display:flex;flex-direction:column;gap:14px}
+.stack .card{margin-bottom:0}
 h3{margin:0 0 10px;font-size:15px}
 form{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
 input[type=number]{background:#0c1526;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:16px;width:110px}
@@ -259,7 +259,7 @@ pub fn page(now_ms: u64, later_hours: Option<i64>) -> String {
     let chips_at = chip_block(true, dh, ls.h);
     let chips_jp = chip_block(false, dh, lj.h);
     let tables_html = format!(
-        "<div class=\"grid2\"><div class=\"card\"><h3>🔄 ザルツブルク → 日本</h3><p class=\"small mut\">ザルツブルクの0〜23時が日本では何時か（+{}時間）</p>{}</div><div class=\"card\"><h3>🔄 日本 → ザルツブルク</h3><p class=\"small mut\">日本の0〜23時がザルツブルクでは何時か（−{}時間）</p>{}</div></div>",
+        "<div class=\"stack\"><div class=\"card\"><h3>🔄 ザルツブルク → 日本</h3><p class=\"small mut\">ザルツブルクの0〜23時が日本では何時か（+{}時間）</p>{}</div><div class=\"card\"><h3>🔄 日本 → ザルツブルク</h3><p class=\"small mut\">日本の0〜23時がザルツブルクでは何時か（−{}時間）</p>{}</div></div>",
         dh, chips_at, dh, chips_jp
     );
 
