@@ -36,7 +36,7 @@ label,.label{font-size:13px;color:var(--mut);letter-spacing:.04em}
 .small{font-size:13px}.mut{color:var(--mut)}
 .hero{text-align:center;padding:30px 22px}
 .hero .badge{margin-left:0}
-.greet{display:flex;gap:12px;align-items:baseline;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.greet{display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:14px}
 .ga{font-size:clamp(20px,4vw,30px);font-weight:800;color:#fff}
 .gj{color:var(--mut);font-size:13px}
 .diff{background:rgba(255,255,255,.03);border:1px dashed var(--line);border-radius:12px;padding:10px 16px;font-size:14px}
